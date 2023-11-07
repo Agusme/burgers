@@ -1,59 +1,10 @@
 {
   "products": [
     {
-      "productName": "Bacon & cheddar burger",
-      "price": "1100",
-      "urlImg": "https://images.pexels.com/photos/3220617/pexels-photo-3220617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "category": "de-carne",
-      "id": 1
-    },
-    {
-      "productName": "Pulled pork sandwich",
-      "price": "850",
-      "urlImg": "https://images.pexels.com/photos/7181419/pexels-photo-7181419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "category": "de-cerdo",
-      "id": 2
-    },
-    {
-      "productName": "Chicken sandwich",
-      "price": "830",
-      "urlImg": "https://images.pexels.com/photos/5474836/pexels-photo-5474836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "category": "de-pollo",
-      "id": 3
-    },
-    {
-      "productName": "Vegan",
-      "price": "50",
-      "urlImg": "https://images.pexels.com/photos/6546024/pexels-photo-6546024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "category": "veganas",
-      "id": 4
-    },
-    {
-      "productName": "Licuado",
-      "price": "700",
-      "urlImg": "https://images.pexels.com/photos/3948523/pexels-photo-3948523.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "category": "bebidas",
-      "id": 5
-    },
-    {
-      "productName": "Muffin",
-      "price": "400",
-      "urlImg": "https://images.pexels.com/photos/14395544/pexels-photo-14395544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "category": "postre",
-      "id": 6
-    },
-    {
-      "productName": "Pancakes",
-      "price": "800",
-      "urlImg": "https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "category": "postre",
-      "id": 7
-    },
-    {
-      "productName": "Vanilla Ice cream",
+      "productName": "HOLA",
       "price": "753",
       "urlImg": "https://images.pexels.com/photos/14525431/pexels-photo-14525431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "category": "postre",
+      "category": "veganas",
       "id": 8
     },
     {
@@ -90,6 +41,76 @@
       "urlImg": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "category": "de-carne",
       "id": 14
+    },
+    {
+      "productName": "Burger",
+      "price": "123",
+      "urlImg": "https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla.jpg",
+      "category": "de-pollo",
+      "id": 15
+    },
+    {
+      "productName": "bueress",
+      "price": "1244",
+      "urlImg": "https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla.jpg",
+      "category": "de-carne",
+      "id": 16
+    },
+    {
+      "productName": "bueress",
+      "price": "1244",
+      "urlImg": "https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla.jpg",
+      "category": "de-carne",
+      "id": 17
+    },
+    {
+      "productName": "bueress",
+      "price": "1244",
+      "urlImg": "https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla.jpg",
+      "category": "de-carne",
+      "id": 18
+    },
+    {
+      "productName": "bicmac",
+      "price": "4999",
+      "urlImg": "https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla.jpg",
+      "category": "de-carne",
+      "id": 19
+    },
+    {
+      "productName": "Burger",
+      "price": "123",
+      "urlImg": "https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla.jpg",
+      "category": "postre",
+      "id": 20
+    },
+    {
+      "productName": "bicmac",
+      "price": "123",
+      "urlImg": "https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla.jpg",
+      "category": "bebidas",
+      "id": 21
+    },
+    {
+      "productName": "bicmac",
+      "price": "1234",
+      "urlImg": "https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla.jpg",
+      "category": "de-pollo",
+      "id": 22
+    },
+    {
+      "productName": "BicMacExplosive",
+      "price": "3400",
+      "urlImg": "https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla.jpg",
+      "category": "veganas",
+      "id": 23
+    },
+    {
+      "productName": "rey",
+      "price": "3",
+      "urlImg": "https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla.jpg",
+      "category": "bebidas",
+      "id": 24
     }
   ]
 }

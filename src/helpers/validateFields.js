@@ -1,9 +1,9 @@
 // Reg expressions
 const regExpProductName = /^[A-Za-z\s?]+$/;
-const regExpPrice = /[0-9]+$/;
+const regExpPrice = /[0-9]+$/; //letras
 // eslint-disable-next-line no-useless-escape
 const regExpUrl = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
-const regExpCategory = /^[A-Za-z\-\s?]+$/;
+const regExpCategory = /^[A-Za-z\-\s?]+$/; //valida que tiene guiones en el medio
 
 // Functions to validate
 export const validateProductName = (field) => {
