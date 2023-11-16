@@ -17,15 +17,12 @@ import { STATUS } from "../../../constants";
 const ProductEdit = ({ getAPI }) => {
   //state
   const [product, setProduct] = useState({});
-
-  const URL = import.meta.env.VITE_API_HAMBURGUESERIA;
-
   // navigate
   const navigate = useNavigate();
 
   //reccuperar el param
   const { id } = useParams();
-  //referencias con useref
+  const URL = import.meta.env.VITE_API_HAMBURGUESERIA;
 
   //references
   const productNameRef = useRef(null);
@@ -64,7 +61,7 @@ const ProductEdit = ({ getAPI }) => {
       !validateUrl(urlImgRef.current.value) ||
       !validateCategory(product.category)
     ) {
-      Swal.fire("Oops!", "Some data is invalid", "Error");
+      Swal.fire("Oop!!", "Some data is invalid", "error");
       return;
     }
     //GUARDAR EL OBJETO AL EDITAR
