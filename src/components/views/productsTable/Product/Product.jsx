@@ -57,14 +57,14 @@ const Product = ({ product, getAPI }) => {
       <td className="w-25">
         <div className="d-flex justify-content-center">
           <Link
-            to={`/product/edit/${product?.id}`}
+            to={`/product/edit/${product?._id}`}
             className="btn-orange mx-1 text-decoration-none text-center"
           >
             Update
           </Link>
           <button
             className="btn-red mx-1"
-            onClick={() => handleDelete(product?.id)}
+            onClick={() => handleDelete(product?._id)}
           >
             Delete
           </button>
