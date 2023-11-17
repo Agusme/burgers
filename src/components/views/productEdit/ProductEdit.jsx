@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/exhaustive-deps */
-
-import axios from "../../../config/axiosInit";
-import { useEffect, useRef, useState } from "react";
 import { Container, Form } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
-import Swal from "sweetalert2";
 import {
   validateCategory,
   validatePrice,
   validateProductName,
   validateUrl,
 } from "../../../helpers/validateFields";
+import axios from "../../../config/axiosInit";
+import { useEffect, useRef, useState } from "react";
+import Swal from "sweetalert2";
+
 import { STATUS } from "../../../constants";
 
 const ProductEdit = ({ getAPI }) => {
