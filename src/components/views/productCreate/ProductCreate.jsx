@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Alert, Container, Form } from "react-bootstrap";
 import {
   validateCategory,
   validatePrice,
@@ -19,7 +19,8 @@ const ProductCreate = ({ getAPI }) => {
   const [category, setCategory] = useState();
   const URL = import.meta.env.VITE_API_HAMBURGUESERIA;
   const navigate = useNavigate();
-
+const [errorMessage, setErrorMessaage] = useState(null)
+const [show, setShow] = useState(false)
   //estado general 
 /* const [inputs, setInputs] = useState([])
 const handleChange =(e)=>{
@@ -87,6 +88,10 @@ const handleChange =(e)=>{
           }
         } catch (error) {
           console.log(error);
+          error.response.data?.message && setErrorMessaage(error.response.data?.message);
+          error.response.data.errors?.lenght > 0 && error.response.data.errors?.map((error)=>
+          setErrorMessaage(error.msg))
+          setShow(true)
         }
       }
     });
@@ -146,6 +151,9 @@ const handleChange =(e)=>{
             <button className="btn-yellow">Save</button>
           </div>
         </Form>
+        {show && (<Alert key={errorMessage} variant='danger' onClose={()=>setShow(false)} dismissible>
+{errorMessage}
+        </Alert>)}
       </Container>
     </div>
   );
