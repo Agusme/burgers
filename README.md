@@ -17,6 +17,6 @@ npm i
 npm start
 
 ### Para ejecutar nuestra base de datos (ejecutarlo en otra terminal/consola aparte a la de react)
-json-server --watch db.json --port 3005
+json-server --watch db.json --port 4000
 
 
