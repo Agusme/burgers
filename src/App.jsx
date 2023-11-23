@@ -13,9 +13,12 @@ import Navigation from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
 import axios from "./config/axiosInit";
 import ProductDetails from "./components/views/productDetail/ProductDetails";
+import Login from "./components/views/login/Login";
+import Register from "./components/views/register/Register";
+import ProtecteedRoute from "./routes/ProtectedRoutes";
 function App() {
   const [products, setProduct] = useState([]);
-
+  const [loggedUser, setLoggedUser] = useState({});
   //usamos la variable entorno
   const URL = import.meta.env.VITE_API_HAMBURGUESERIA;
 
@@ -36,22 +39,48 @@ function App() {
   };
   return (
     <BrowserRouter>
-      <Navigation />
+      <Navigation loggedUser={loggedUser} setLoggedUser={setLoggedUser} />
       <main>
         <Routes>
           <Route exact path="/" element={<Home products={products} />} />
-          <Route
+         
+          <Route path="/*" element={<ProtecteedRoute>
+<Routes>
+<Route
             exact
             path="/product/table"
-            element={<ProductsTable products={products}  getAPI={getAPI} />}
+            element={<ProductsTable products={products} getAPI={getAPI} />}
           />
           <Route
             exact
             path="/product/create"
             element={<ProductCreate getAPI={getAPI} />}
           />
-          <Route exact path="/product/edit/:id" element={<ProductEdit  getAPI={getAPI}/>} />
-          <Route exact path="/product/buy/:id" element={<ProductDetails getAPI={getAPI} /> } />
+          <Route
+            exact
+            path="/product/edit/:id"
+            element={<ProductEdit getAPI={getAPI} />}
+          />
+</Routes>
+
+
+          </ProtecteedRoute>} ></Route>
+          <Route
+            exact
+            path="/product/buy/:id"
+            element={<ProductDetails getAPI={getAPI} />}
+          />
+          <Route exact path="*" element={<Error404 />} />
+          <Route
+            exact
+            path="/auth/login/"
+            element={<Login setLoggedUser={setLoggedUser} />}
+          />
+          <Route
+            exact
+            path="/auth/register/"
+            element={<Register setLoggedUser={setLoggedUser} />}
+          />
           <Route exact path="*" element={<Error404 />} />
         </Routes>
       </main>

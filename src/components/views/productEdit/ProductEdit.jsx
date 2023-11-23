@@ -92,7 +92,13 @@ const ProductEdit = ({ getAPI }) => {
       }); */
 
           //petición usando Axios
-          const res = await axios.put(`${URL}/${id}`, productUpdated);
+          const res = await axios.put(`${URL}/${id}`, productUpdated , {
+            headers:{
+              "Content-Type":"application/json",
+              "x-access-token": JSON.parse(localStorage.getItem("user-token"))
+              .token,
+            }
+          });
 
           console.log(res);
           if (res.status === STATUS.STATUS_OK) {

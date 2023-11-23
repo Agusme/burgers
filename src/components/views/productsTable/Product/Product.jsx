@@ -31,7 +31,13 @@ const Product = ({ product, getAPI }) => {
               "content-Type": "application/json"
             }
           } ) */
-          const res = await axios.delete(`${URL}/${id}`);
+          const res = await axios.delete(`${URL}/${id}`,{
+            headers:{
+              "Content-Type": "application/json",
+              "x-access-token": JSON.parse(localStorage.getItem("user-token"))
+              .token,
+            }
+          });
 
           console.log(res);
           if (res.status === STATUS.STATUS_OK) {

@@ -68,10 +68,18 @@ const handleChange =(e)=>{
             method: "POST",
             headers: {
               "Content-Type": "application/json",
+              "x-access-token" : JSON.parse(localStorage.getItem("user-token"))
+              .token,
             },
             body: JSON.stringify(newProduct),
           }); */
-          const res = await axios.post(URL, newProduct)
+          const res = await axios.post(URL, newProduct, {
+            headers:{
+              "Content-Type":"application/json",
+              "x-access-token": JSON.parse(localStorage.getItem("user-token"))
+              .token,
+            }
+          })
           console.log(res);
           if (res.status === 201) {
             Swal.fire(
