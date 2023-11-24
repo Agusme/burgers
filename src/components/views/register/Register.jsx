@@ -30,6 +30,7 @@ const Register = ({ setLoggedUser }) => {
       name: inputs.name,
       email: inputs.email,
       password: inputs.password,
+      role: inputs.role
     };
     try {
       /* const res = await fetch(`${URL}/register`, {
@@ -84,6 +85,16 @@ const Register = ({ setLoggedUser }) => {
               placeholder="johndoe@gmail.com"
               name="email"
               value={inputs.email || ""}
+              onChange={(e) => handleChange(e)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Role*</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="regular user"
+              name="role"
+              value={inputs.role || ""}
               onChange={(e) => handleChange(e)}
             />
           </Form.Group>
