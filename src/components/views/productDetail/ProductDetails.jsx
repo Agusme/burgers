@@ -45,7 +45,7 @@ const ProductDetails = () => {
              <CardText className="fw-bold">$ {product?.price} </CardText>
 
               <Link
-                to="/error/"
+                to="/"
                 className="btn-red text-decoration-none text-center"
               >
                 Buy
