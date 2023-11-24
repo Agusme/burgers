@@ -36,10 +36,15 @@ const Login = ({ setLoggedUser }) => {
           password: inputs.password,
         }),
       }); */
-       const res = await axios.post(`${URL}/login`, {
+       /* const res = await axios.post(`${URL}/login`, {
         email: inputs.email,
         password: inputs.password,
-      });
+      }); */
+const res = await axios.post(`${URL}/login`, {
+    email: inputs.email,
+    password: inputs.password,
+});
+
       if (res.status === 200) {
         Swal.fire("Logged!", "Your user has been logged.", "success");
         //const data = await res.json(); //si es con fetch
