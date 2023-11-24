@@ -70,7 +70,7 @@ function App() {
             path="/product/buy/:id"
             element={<ProductDetails getAPI={getAPI} />}
           />
-          <Route exact path="*" element={<Error404 />} />
+          <Route exact path="/error" element={<Error404 />} />
           <Route
             exact
             path="/auth/login/"
